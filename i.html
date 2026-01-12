@@ -10,8 +10,12 @@
         <h3>Quiz App</h3>
     </div>
 
-    <div class="question">
+    <div>
         <h2>Questions :</h2>
+    </div>
+
+    <div class="question">
+        Q1
     </div>
 
     <ul>
@@ -50,45 +54,89 @@
     </button>
 
     <script>
-/*
+
         const quizques = [
-            {
-               " Which HTML tag is used to create a hyperlink?"
-
-                A. <link>
-                B. <a>
-                C. <href>
-                D. <url>
-                    
-            }
-        ] 
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        {
+          question: "Which HTML tag is used to create a hyperlink?",
+          A: "<link>",
+          B: "<a>",
+          C: "<href>",
+          D: "<url>",
+          correct: "B"
+        },
+        {
+          question: "What does HTML stand for?",
+          A: "Hyper Trainer Marking Language",
+          B: "Hyper Text Markup Language",
+          C: "Hyper Text Marketing Language",
+          D: "Hyper Tool Markup Language",
+          correct: "B"
+        },
+        {
+          question: "Which HTML tag is used to insert an image?",
+          A: "<image>",
+          B: "<img>",
+          C: "<pic>",
+          D: "<src>",
+          correct: "B"
+        },
+        {
+          question: "Which CSS property is used to change text color?",
+          A: "text-color",
+          B: "font-color",
+          C: "color",
+          D: "fgcolor",
+          correct: "C"
+        },
+        {
+          question: "Which CSS property controls the text size?",
+          A: "text-style",
+          B: "font-size",
+          C: "text-size",
+          D: "font-style",
+          correct: "B"
+        },
+        {
+          question: "How do you select an element with id 'box' in CSS?",
+          A: ".box",
+          B: "#box",
+          C: "box",
+          D: "*box",
+          correct: "B"
+        },
+        {
+          question: "Which keyword is used to declare a variable in JavaScript?",
+          A: "int",
+          B: "string",
+          C: "var",
+          D: "float",
+          correct: "C"
+        },
+        {
+          question: "Which symbol is used for single-line comments in JavaScript?",
+          A: "<!-- -->",
+          B: "#",
+          C: "//",
+          D: "/* */",
+          correct: "C"
+        },
+        {
+          question: "Which function is used to show an alert box in JavaScript?",
+          A: "msg()",
+          B: "alert()",
+          C: "popup()",
+          D: "display()",
+          correct: "B"
+        },
+        {
+          question: "Which CSS property is used to add space inside an element?",
+          A: "margin",
+          B: "border",
+          C: "spacing",
+          D: "padding",
+          correct: "D"
+        }
+      ];
 
         const ans = 0
         const score = 0
@@ -103,10 +151,18 @@
 
         function loadquiz (){
 
-            let quixdata = ques
+            const currentquizdata = quizques[ans]
 
+            web_question.innerText = currentquizdata.question
+            a_text.innerText = currentquizdata.a
+            b_text.innerText = currentquizdata.b
+            c_text.innerText = currentquizdata.c
+            d_text.innerText = currentquizdata.d
 
         }
+
+        loadquiz()
+
     </script>
 </body>
 </html>
