@@ -19,7 +19,7 @@
         Q1
     </div>
 
-    <ul>
+    <ul class="answer">
 
         <li class="a">
 
@@ -76,6 +76,7 @@
     
     // DOM selection
     const ques = document.querySelector(".ques");
+    const ans = document.querySelector(".ans")
     const a_text = document.querySelector(".a label");
     const b_text = document.querySelector(".b label");
     const c_text = document.querySelector(".c label");
@@ -97,7 +98,38 @@
     
     loadquiz();
     
+    function deselect (){
+      forEach(ans => ans.checked = false)
+    }
 
+    function getselect (){
+      let answer
+      forEach(answer => {
+        if (answer.checked)
+        {
+          selected = answer.id
+        }
+      })
+      return selected
+    }
+
+    ".btn".addEventListener("click", () => {
+      const answer = getselected()
+    })
+
+    if(answer === quizques.length) {
+      loadquiz()
+    }
+
+    else
+    {
+      document.body.innerHTML = 
+     `<h2>Quiz finished </h2>
+      <h3>Your score : ${score} / ${quizques.length} </h3>
+      <button onclick = "location.reload()">Restart Quiz</button>`
+    }
+
+    loadquiz()
     </script>
                              
 </body>
